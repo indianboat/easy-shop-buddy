@@ -1,15 +1,14 @@
 import { Inter } from 'next/font/google'
-import './globals.css';
-import PrelineScript from './components/Preline/PrelineScript';
-import NavbarComponent from './components/Navbar/Navbar';
-import Provider from './components/ThemeProvider/Provider';
-import FooterComponent from './components/Footer/Footer';
+import './globals.css'
+import Navbar from './components/NavbarComponent/Navbar'
+import Footer from './components/FooterComponent/Footer'
+import Provider from './components/ThemeComponent/Provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Easy Shop Buddy',
-  description: 'E-commerce web application',
+  title: 'Easy shop buddy',
+  description: 'Ecommerce web application',
 }
 
 export default function RootLayout({ children }) {
@@ -17,10 +16,11 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Provider>
-          <PrelineScript />
-          <NavbarComponent />
-          {children}
-          <FooterComponent />
+          <Navbar />
+          <div className="container w-11/12 mx-auto py-8">
+            {children}
+          </div>
+          <Footer />
         </Provider>
       </body>
     </html>
