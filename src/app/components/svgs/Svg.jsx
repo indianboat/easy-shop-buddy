@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Sun = ({ width = 24, height = 24 }) => {
   return (
     <svg
@@ -29,7 +27,6 @@ export const Sun = ({ width = 24, height = 24 }) => {
     </svg>
   )
 };
-
 
 export const Moon = ({ width = 24, height = 24 }) => {
   return (
@@ -92,6 +89,21 @@ export const GoogleIcon = () => {
         d="M23.4694 9.07688C27.8699 9.07688 30.8622 10.9863 32.5344 12.5725L39.1645 6.11C35.0867 2.32063 29.8061 0 23.4694 0C14.287 0 6.36607 5.2875 2.49362 12.9544L10.0918 18.8588C11.9987 13.1894 17.25 9.07688 23.4694 9.07688Z"
         fill="#EB4335"
       />
+    </svg>
+  )
+}
+
+export const Warning = ({ width = 24, height = 24 }) => {
+  return (
+    <svg
+      className="h-4 w-4"
+      width={width}
+      height={height}
+      fill="currentColor"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+    >
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
     </svg>
   )
 }

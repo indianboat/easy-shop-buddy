@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-import { GoogleIcon } from '../components/svgs/Svg';
+import { GoogleIcon, Warning } from '../components/svgs/Svg';
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 
@@ -43,8 +43,8 @@ const Signin = () => {
                 Sign in
               </h1>
               <p className="mt-2 flex flex-row gap-x-1 justify-center text-sm text-gray-600 dark:text-gray-400">
-                Don't have an account yet?
-                <Link href="/" className="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                Don&apos;t have an account yet?
+                <Link href="/signup" className="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                   Sign up here
                 </Link>
               </p>
@@ -80,17 +80,7 @@ const Signin = () => {
                       {formik.touched.email && formik.errors.email ? (
                         <>
                           <p className="text-xs text-red-600 dark:text-rose-500 mt-2 flex items-center gap-x-2" id="email-error">
-                            {formik.errors.email}
-                            <svg
-                              className="h-4 w-4 text-red-500"
-                              width={14}
-                              height={14}
-                              fill="currentColor"
-                              viewBox="0 0 16 16"
-                              aria-hidden="true"
-                            >
-                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                            </svg>
+                            {formik.errors.email} <Warning />
                           </p>
                         </>
                       ) : null}
@@ -121,15 +111,7 @@ const Signin = () => {
                         formik.touched.password && formik.errors.password ?
                           (
                             <p className="text-xs text-red-600 dark:text-rose-500 mt-2 grid grid-flow-col justify-start gap-x-2" id="password-error">
-                              {formik.errors.password} <svg
-                              className="h-4 w-4 text-red-500"
-                              width={14}
-                              height={14}
-                                fill="currentColor"
-                                viewBox="0 0 16 16"
-                              >
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                              </svg>
+                              {formik.errors.password} <Warning />
                             </p>
                           ) : null
                       }

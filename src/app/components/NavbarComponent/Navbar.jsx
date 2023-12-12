@@ -14,7 +14,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <Link href="/" className="flex-none font-bold text-xl dark:text-white">
+          <Link href="/" className="flex-none font-bold text-xl dark:text-gray-200">
             EasyShopBuddy
           </Link>
 
